@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دستبند</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="/css/Style.css">
+    <link rel="stylesheet" href="/css/product.css">
+
+
+</head>
+
+<body>
+
+     <!-- Header Section -->
+    <Header>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="container">
+                <!-- قسمت اول: لوگو -->
+                <div class="logo">
+                    <a href="/index.html">
+                        <img src="/img/Logo/logo-2.png" alt="هامین گالری" width="50" height="60">
+                    </a>
+                </div>
+
+                <!-- قسمت دوم: لینک‌های اصلی (مخفی در موبایل) -->
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#">فروشگاه <i class="fas fa-chevron-down arrow"></i></a>
+                        <ul class="submenu">
+                            <li><a href="/Necklace.html">گردنبند</a></li>
+                            <li><a href="/Bracelet.html">دستبند</a></li>
+                            <li><a href="/Ring.html">انگشتر</a></li>
+                            <li><a href="/Earrings.html">گوشواره</a></li>
+                            <li><a href="/Jewelry-Set.html">نیم ست</a></li>
+                            <li><a href="/man-products.html">محصولات مردانه</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="/About.html">درباره گالری هامین</a></li>
+                    <li class="dropdown"><a href="#article">مقالات</a></li>
+                    <li class="dropdown"><a href="/Call.html">تماس با ما</a></li>
+                </ul>
+
+                <!-- قسمت سوم: آیکون‌ها -->
+                <div class="nav-icons">
+                    <a href="#" class="search-icon" aria-label="جستجو"><i class="fas fa-search"></i></a>
+                    <a href="/shopping-page.html" id="cart" class="cart-icon" aria-label="سبد خرید"><i
+                            class="fas fa-shopping-cart"></i><span id="cart-count">0</span></a>
+                    <a href="/login.html" class="user-icon" aria-label="حساب کاربری"><i class="fas fa-user"></i></a>
+                </div>
+
+                <!-- دکمه همبرگری (نمایش در موبایل) -->
+                <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </Header>
+
+    <!-- Main Section -->
+    <div class="product-container">
+        <!-- Right Main Content -->
+        <div class="sidebar">
+            <!-- Sidebar Section for Search -->
+            <div class="section-box">
+                <div class="section-title">جستجوی محصولات</div>
+                <div class="main-box">
+                    <input type="search" placeholder="جستجوی محصولات" class="input">
+                    <button class="button">جستجو</button>
+                </div>
+            </div>
+
+            <!-- Sidebar Section for Categories -->
+            <div class="section-box">
+                <div class="section-title">دسته‌های محصولات</div>
+                <ul>
+                    <li><a href="Necklace.html">گردنبند </a></li>
+                    <li><a href="Bracelet.html">دستبند</a></li>
+                    <li><a href="Ring.html">انگشتر</a></li>
+                    <li><a href="Earrings.html">گوشواره</a></li>
+                    <li><a href="man-products.html">محصولات مردانه</a></li>
+                </ul>
+            </div>
+
+            <!-- Sidebar Section for Price Filter -->
+            <div class="section-box">
+                <div class="section-title">فیلتر براساس قیمت</div>
+                <input class="price-slider" id="priceRange" type="range" min="1000000" max="100000000" value="5000000">
+                <div class="text-center" id="priceValue">قیمت: ۵,۰۰۰,۰۰۰ تومان</div>
+                <button onclick="filterByPrice()" class="button">صافی</button>
+            </div>
+        </div>
+
+        <!-- Left Sidebar -->
+        <div class="main-content">
+            <h1>مدل دستبند</h1>
+            <div class="select-filter">
+                <select id="filterSelect" onchange="filterProducts()">
+                    <option value="all-product">همه محصولات</option>
+                    <option value="popular">محبوب‌ترین</option>
+                    <option value="cheapest">ارزان‌ترین</option>
+                    <option value="bestseller">پرفروش‌ترین</option>
+                </select>
+            </div>
+            <div class="product-grid" id="productList"></div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-top">
+            <div class="section-center">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>گالری هامین</h4>
+                        <ul>
+                            <li><a href="./about.html" target="_blank">درباره ما</a></li>
+                            <li><a href="#">خدمات ما</a></li>
+                            <li><a href="#">سوالات</a></li>
+                            <li><a href="#">قوانین و مقررات</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>راهنمای خرید</h4>
+                        <ul>
+                            <li><a href="#">رویه سفارش</a></li>
+                            <li><a href="#">نحوه ثبت سفارش</a></li>
+                            <li><a href="#">شیوه‌های پرداخت</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>راه ارتباطی</h4>
+                        <ul>
+                            <li><a href="#">مشاوره و خرید</a></li>
+                            <li><a href="#">فروشگاه ما</a></li>
+                            <li><a href="#">آدرس ما</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>همراه ما باشید</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-down">
+            <p>© تمامی حقوق برای گالری هامین محفوظ است | طراحی توسط متین فتحی</p>
+        </div>
+
+    </footer>
+
+    <script>
+        //  تعریف محصولات گردنبند
+        const products = [
+            { id: 1, name: 'دستبند آویز قلب', price: 6780000, img: 'img/Products/Bracelet/دستبند آویز قلبjpg.webp' },
+            { id: 2, name: 'دستبند برگ', price: 8680000, img: 'img/Products/Bracelet/دستبند برگ.png' },
+            { id: 3, name: 'دستبند دایره', price: 5590000, img: 'img/Products/Bracelet/دستبند دایره.png' },
+            { id: 4, name: 'دستبند دو پروانه مخراجی', price: 7830000, img: 'img/Products/Bracelet/دستبند دو پروانه مخراجی.png' },
+            { id: 5, name: 'دستبند پر گل', price: 9210000, img: 'img/Products/Bracelet/دستبند پر گل.png' },
+            { id: 6, name: 'دستبند پروانه تو خالی', price: 6550000, img: 'img/Products/Bracelet/دستبند پروانه تو خالی.jpg' },
+        ];
+
+        //  دریافت عناصر دام
+        const productList = document.getElementById('productList');
+        const priceRange = document.getElementById('priceRange');
+        const priceValue = document.getElementById('priceValue');
+
+        //  مقداردهی اولیه سبد خرید از localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        //  تابع برای نمایش تعداد محصولات در کنار آیکن سبد خرید
+        function updateCartCount() {
+            const count = cart.reduce((total, item) => total + item.quantity, 0);
+            const el = document.getElementById('cart-count');
+            if (el) el.innerText = count;
+        }
+
+        //  افزودن محصول به سبد خرید 
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            let existing = cart.find(item => item.id === product.id);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            // alert('محصول با موفقیت به سبد خرید اضافه شد!');
+        }
+
+        //  نمایش محصولات فیلترشده در صفحه
+        function displayProducts(filtered) {
+            productList.innerHTML = '';
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <img src="${p.img}" alt="${p.name}">
+                    <h3>${p.name}</h3>
+                    <div class="card-footer">
+                        <div class="price">${p.price.toLocaleString()} تومان</div>
+                        <button class="button" onclick="addToCart(${p.id})">
+                            افزودن به سبد
+                        </button>
+                    </div>
+                `;
+                productList.appendChild(card);
+            });
+            updateCartCount();
+        }
+
+        //  فیلتر کردن محصولات بر اساس گزینه‌های انتخابی
+        function filterProducts() {
+            const value = document.getElementById('filterSelect').value;
+            let filtered = [];
+
+            if (value === 'all-product') {
+                filtered = products.filter(p => p.price >= 100000 && p.price <= 1000000000);
+            } else if (value === 'popular') {
+                filtered = products.filter(p => p.price >= 5000000 && p.price <= 35000000);
+            } else if (value === 'cheapest') {
+                filtered = products.filter(p => p.price >= 1000000 && p.price <= 13500000);
+            } else if (value === 'bestseller') {
+                filtered = products.filter(p => p.price >= 10000000 && p.price <= 40000000);
+            }
+
+            displayProducts(filtered);
+        }
+
+        //  فیلتر قیمت بر اساس اسلایدر
+        function filterByPrice() {
+            const max = parseInt(priceRange.value);
+            const filtered = products.filter(p => p.price <= max);
+            displayProducts(filtered);
+        }
+
+        //  رویداد برای نمایش قیمت فعلی اسلایدر
+        priceRange.addEventListener('input', () => {
+            priceValue.textContent = `قیمت: ${Number(priceRange.value).toLocaleString()} تومان`;
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            //  نمایش محصولات
+            updateCartCount();
+            filterProducts();
+
+            //  کد منوی همبرگری
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+            const dropdownItems = document.querySelectorAll('.nav-links .dropdown > a');
+
+            hamburger?.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+                const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+                hamburger.setAttribute('aria-expanded', !isExpanded);
+                if (!navLinks.classList.contains('active')) {
+                    closeAllSubmenus();
+                }
+            });
+
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    const isMobileView = window.getComputedStyle(hamburger).display !== 'none';
+                    if (isMobileView) {
+                        e.preventDefault();
+                        const parentLi = item.parentElement;
+                        const submenu = parentLi.querySelector('.submenu');
+
+                        if (parentLi.classList.contains('open')) {
+                            parentLi.classList.remove('open');
+                        } else {
+                            closeAllSubmenus();
+                            parentLi.classList.add('open');
+                        }
+                    }
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!navLinks.contains(e.target) && !hamburger.contains(e.target) && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    hamburger.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    closeAllSubmenus();
+                }
+            });
+
+            function closeAllSubmenus() {
+                document.querySelectorAll('.nav-links .dropdown.open').forEach(openDropdown => {
+                    openDropdown.classList.remove('open');
+                });
+            }
+        });
+
+
+
+
+
+    </script>
+    <script src="js/test.js"></script>
+
+</body>
+
+</html>

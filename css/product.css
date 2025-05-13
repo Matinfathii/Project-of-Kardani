@@ -1,0 +1,223 @@
+body {
+    background: #FDD835;
+    background: linear-gradient(1deg, rgba(253, 216, 53, 0.331) 0%, rgba(255, 245, 157, 0.623) 35%, rgba(255, 253, 231, 0.76) 100%);
+}
+
+a {
+    color: var(--clr-primary-7);
+    transition: all .3s ease;
+}
+
+a:hover {
+    color: var(--clr-primary-4);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Container */
+.product-container {
+    display: flex;
+    max-width: var(--max-width);
+    margin: 6rem auto;
+    padding: 32px;
+    gap: 32px;
+}
+
+/* Sidebar (Left Section) */
+.sidebar {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.sidebar .section-box {
+    background-color: rgba(139, 69, 19, 0.1);
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.sidebar .section-title {
+    text-align: center;
+    color: #8B4513;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.sidebar .input,
+.sidebar .button {
+    border: 1px solid #8B4513;
+    border-radius: 8px;
+    padding: 8px;
+    font-family: var(--ff);
+}
+
+.sidebar .input {
+    width: 100%;
+    background-color: var(--clr-white);
+}
+
+.sidebar .input:focus {
+    box-shadow: 0 0 0 3px #876800ce;
+    outline: none;
+}
+
+.sidebar .button {
+    background-color: #8B4513;
+    color: var(--clr-white);
+    font-size: 15px;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+}
+
+.main-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width:998px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+/* Price Slider */
+.price-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: #d4a017;
+    outline: none;
+}
+
+.price-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #8B4513;
+    cursor: pointer;
+}
+
+.price-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #8B4513;
+    cursor: pointer;
+}
+
+/* Main Content (Right Section) */
+.main-content {
+    width: 100%;
+    flex-grow: 1;
+}
+
+#filterSelect {
+    font-family: var(--ff);
+}
+
+.main-content h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 16px;
+}
+
+.select-filter {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.select-filter select {
+    width: 160px;
+    background-color: var(--clr-white);
+    border: 1px solid #8B4513;
+    color: #8B4513;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+}
+
+@media (min-width: 640px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.product-card {
+    background-color: var(--clr-primary-11);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    padding-bottom: 5px;
+    transition: transform .9s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.product-card h3 {
+    color: var(--clr-primary-7);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 16px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0;
+    padding-top: 23px;
+}
+
+.product-card .price {
+    color: var(--clr-primary-6);
+    font-size: 14px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+.product-card .button {
+    background-color: var(--clr-primary-6);
+    color: var(--clr-primary-11);
+    font-weight: 900;
+    font-size: 13px;
+    padding: 8px 6px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.product-card .button:hover {
+    background-color: var(--clr-primary-2);
+    color: var(--clr-primary-6);
+}

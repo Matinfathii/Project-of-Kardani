@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سبد خرید</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="/css/Style.css">
+    <link rel="stylesheet" href="/css/shopping.css">
+</head>
+
+<body>
+
+     <!-- Header Section -->
+    <Header>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="container">
+                <!-- قسمت اول: لوگو -->
+                <div class="logo">
+                    <a href="/index.html">
+                        <img src="/img/Logo/logo-2.png" alt="هامین گالری" width="50" height="60">
+                    </a>
+                </div>
+
+                <!-- قسمت دوم: لینک‌های اصلی (مخفی در موبایل) -->
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#">فروشگاه <i class="fas fa-chevron-down arrow"></i></a>
+                        <ul class="submenu">
+                            <li><a href="/Necklace.html">گردنبند</a></li>
+                            <li><a href="/Bracelet.html">دستبند</a></li>
+                            <li><a href="/Ring.html">انگشتر</a></li>
+                            <li><a href="/Earrings.html">گوشواره</a></li>
+                            <li><a href="/Jewelry-Set.html">نیم ست</a></li>
+                            <li><a href="/man-products.html">محصولات مردانه</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="/About.html">درباره گالری هامین</a></li>
+                    <li class="dropdown"><a href="#article">مقالات</a></li>
+                    <li class="dropdown"><a href="/Call.html">تماس با ما</a></li>
+                </ul>
+
+                <!-- قسمت سوم: آیکون‌ها -->
+                <div class="nav-icons">
+                    <a href="#" class="search-icon" aria-label="جستجو"><i class="fas fa-search"></i></a>
+                    <a href="/shopping-page.html" id="cart" class="cart-icon" aria-label="سبد خرید"><i
+                            class="fas fa-shopping-cart"></i><span id="cart-count">0</span></a>
+                    <a href="/login.html" class="user-icon" aria-label="حساب کاربری"><i class="fas fa-user"></i></a>
+                </div>
+
+                <!-- دکمه همبرگری (نمایش در موبایل) -->
+                <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </Header>
+    
+    <div class="section-center cart-container-1">
+        <div class="cart-container">
+
+            <!-- بخش راست صفحه -->
+            <div class="cart-right">
+
+                <div class="cart-items">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>محصول</th>
+                                <th>قیمت</th>
+                                <th>تعداد</th>
+                                <th>حذف</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-table-body">
+                            <!-- اینجا محصولات اضافه میشن -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="discount-box">
+                    <input type="text" placeholder="کد تخفیف">
+                    <button>اعمال تخفیف</button>
+                </div>
+
+            </div>
+
+            <!-- بخش چپ صفحه -->
+            <div class="cart-left">
+                <div class="summary">
+                    <div class="summary-header">
+                        جمع کل سبد خرید
+                    </div>
+                    <div class="summary-total" id="total-price">
+                        ۰ تومان
+                    </div>
+                    <button class="confirm-btn">تایید و تکمیل سفارش</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-top">
+            <div class="section-center">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>گالری هامین</h4>
+                        <ul>
+                            <li><a href="./about.html" target="_blank">درباره ما</a></li>
+                            <li><a href="#">خدمات ما</a></li>
+                            <li><a href="#">سوالات</a></li>
+                            <li><a href="#">قوانین و مقررات</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>راهنمای خرید</h4>
+                        <ul>
+                            <li><a href="#">رویه سفارش</a></li>
+                            <li><a href="#">نحوه ثبت سفارش</a></li>
+                            <li><a href="#">شیوه‌های پرداخت</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>راه ارتباطی</h4>
+                        <ul>
+                            <li><a href="#">مشاوره و خرید</a></li>
+                            <li><a href="#">فروشگاه ما</a></li>
+                            <li><a href="#">آدرس ما</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>همراه ما باشید</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-down">
+            <p>© تمامی حقوق برای گالری هامین محفوظ است | طراحی توسط متین فتحی</p>
+        </div>
+
+    </footer>
+
+
+    <script src="js/test.js"></script>
+</body>
+
+</html>
