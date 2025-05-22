@@ -42,7 +42,6 @@
 body {
     background-color: var(--clr-primary-11);
     font-family: var(--ff);
-    columns: var(--clr-grey-1);
     font-size: .875rem;
 }
 
@@ -758,6 +757,7 @@ Gift Styles
     border-radius: 100px;
     border-color: var(--clr-primary-2, 0.09);
     box-shadow: 0px 1.5px 2px 1px var(--clr-primary-2, 0.09);
+    cursor: pointer;
 }
 
 .Gift-btn span {

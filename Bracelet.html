@@ -175,7 +175,7 @@
     </footer>
 
     <script>
-        //  تعریف محصولات گردنبند
+        //  تعریف محصولات دستبند
         const products = [
             { id: 1, name: 'دستبند آویز قلب', price: 6780000, img: 'img/Products/Bracelet/دستبند آویز قلبjpg.webp' },
             { id: 2, name: 'دستبند برگ', price: 8680000, img: 'img/Products/Bracelet/دستبند برگ.png' },
@@ -263,7 +263,7 @@
             displayProducts(filtered);
         }
 
-        //  رویداد برای نمایش قیمت فعلی اسلایدر
+        //  آپدیت نمایش عدد قیمت هنگام کشیدن اسلایدر
         priceRange.addEventListener('input', () => {
             priceValue.textContent = `قیمت: ${Number(priceRange.value).toLocaleString()} تومان`;
         });
@@ -321,11 +321,6 @@
                 });
             }
         });
-
-
-
-
-
     </script>
     <script src="js/test.js"></script>
 
